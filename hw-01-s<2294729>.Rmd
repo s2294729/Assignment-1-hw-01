@@ -18,8 +18,11 @@ library(cherryblossom)
 
 
 ## Exercise 1
-
-_Write your text to answer exercise 1 here (Please delete this message before submission!)_
+This is my answer:
+1. There are 19961 runners in the data set
+2. There are nine variables for each runner 
+3. Event is Categorical variables
+net_sec is Discrete variables
 
 
 
@@ -32,8 +35,14 @@ _The R chunk below generates the given histogram. Edit the code to account for t
 _Edit the code below:_
 ```{r run17_data_viz, warning = FALSE, out.width = "80%"}
 ggplot(data = run17, 
-       mapping = aes(x = net_sec)) +
-  geom_histogram(binwidth = 200)
+       mapping = aes(x = sex, y = net_sec)) +
+  geom_boxplot()+
+  labs(
+    x = "sex",
+    y = "net_sec",
+    title = "the relationship between sex identified runner, time taken to finish and chosen event"
+   ) + 
+  facet_wrap(~ event)
 ```
 
 
@@ -42,8 +51,15 @@ ggplot(data = run17,
 
 ## Exercise 3
 
-_Write your text to answer exercise 3 here (Please delete this message before submission!)_
-
+In 10 mile, Male's median, upper and lower quatile running time is 5500s,6100s and 4800s repectively. 
+Female's median, upper and lower quatile running time is 6100s, 6400s and 5500s repectively 
+Male's fastest time is about 2900s, female's fastest time is about 3400s.
+In 5k events, Male's median, upper and lower quatile running time is 2100s, 2600s and 1800s repectively.
+Female's median, upper and lower quatile running time is 2200s, 2900s and 2000s respectely. 
+Male's fastest time is about 2100s, female's fastest time is about 2200s.
+In the graph, the box plot of man the below female 
+Therefore, the time taken for male ti finish the runinng is much faster than female. 
+The longer the distance, the longer the time takes for runners to finish. 
 
 
 
@@ -52,19 +68,18 @@ _Write your text to answer exercise 3 here (Please delete this message before su
 
 ```{r bad_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-knitr::include_graphics("img/bad_viz.png")
+knitr::include_graphics("img/Most Wickets in Deaths overs in ODIS.png")
 ```
 
-_Edit the text below to provide a reference for your image (Please delete this message before submission!)_
 
 
-{Author/Organisation}, "{Title of website}" [Online]. Available at: {URL} (Accessed: {day month year})
+Justin Nzeh, "Most Wickets in Death Overs in Odis" [Online]. Available at: https://zebranewsonline.com/most-wickets-in-death-overs-in-odis/ (Accessed: March 15, 2022)
 
 
 The above image presents a bad data visualisation because:
 
--   _Reason 1_
--   _Reason 2_
+-Reason 1: Although the average is of a lighter shade, you can easily miss the color differences. When making such a chart, a good color to use in contrasting orange is blue.
+-Reason 2: the bar chart is stacked with numbers that have different units. Wickets are measured in length using mainly inches and centimeters. On the other hand, averages have no units.
 
 
 
@@ -75,19 +90,21 @@ The above image presents a bad data visualisation because:
 
 ```{r good_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-knitr::include_graphics("img/good_viz.png")
+knitr::include_graphics("img/Plastic-Waste-Pollution-scaled.jpeg")
 ```
 
-_Edit the text below to provide a reference for your image (Please delete this message before submission!)_
 
 
-{Author/Organisation}, "{Title of website}" [Online]. Available at: {URL} (Accessed: {day month year})
+
+Jamie Kettle, "Plastic Waste Pollution data visualisation" [Online]. Available at: https://www.behance.net/gallery/106936329/Plastic-Waste-Pollution-data-visualisation (Accessed: October 29th 2020)
 
 
 The above image presents a good data visualisation because:
 
--   _Reason 1_
--   _Reason 2_
+-Reason 1: The infographic provides a clear and precise picture on current surface plastic mass by ocean, measuring it in a creative way. We can see plastic waste management for every country in a colored bar chart. The names of the countries that report 100% of all their plastic waste handled properly are highlighted in bold. 
+-Reason 2: the GDP of the country and efficient plastic waste management aren’t always correlated – you can see it by irregular patterns shown in the infographic.
+
+
 
 
 
